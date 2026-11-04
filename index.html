@@ -1,0 +1,452 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shahriar Quader | Personal Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #0c0d10;
+            color: #f5f5f5;
+            line-height: 1.6;
+        }
+
+        :root {
+            --gold: #f5c15d;
+            --dark: #15171b;
+            --muted: #a7a7ad;
+        }
+
+        /* Navigation */
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background: #111216;
+            border-bottom: 1px solid #292a30;
+        }
+
+        .logo {
+            font-size: 23px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: var(--gold);
+        }
+
+        nav a {
+            color: #ddd;
+            text-decoration: none;
+            margin-left: 25px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--gold);
+        }
+
+        /* Hero Section */
+
+        .hero {
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            padding: 70px 8%;
+            background:
+                linear-gradient(90deg, #101115 20%, #101115dd 55%, #10111555),
+                url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1600&q=80");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-content {
+            max-width: 650px;
+        }
+
+        .hero h1 {
+            font-size: clamp(38px, 6vw, 70px);
+            line-height: 1.1;
+            margin: 15px 0;
+        }
+
+        .hero h1 span {
+            color: var(--gold);
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: #c1c1c7;
+        }
+
+        .tagline {
+            font-style: italic;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            border-radius: 5px;
+            background: var(--gold);
+            color: #111;
+            font-weight: bold;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #fff;
+            transform: translateY(-3px);
+        }
+
+        /* Profile Picture */
+
+        .profile {
+            width: 260px;
+            height: 310px;
+            border: 3px solid var(--gold);
+            border-radius: 15px;
+            object-fit: cover;
+            object-position: center;
+            background: #222;
+        }
+
+        /* Main Sections */
+
+        section {
+            padding: 60px 8%;
+        }
+
+        .section-title {
+            font-size: 30px;
+            margin-bottom: 25px;
+        }
+
+        .section-title span {
+            color: var(--gold);
+        }
+
+        .about {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        .card {
+            background: var(--dark);
+            border: 1px solid #25262c;
+            padding: 30px;
+            border-radius: 12px;
+        }
+
+        .card p {
+            color: #c3c3c8;
+        }
+
+        /* Interests */
+
+        .interests {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .interest {
+            text-align: center;
+            padding: 25px;
+            background: var(--dark);
+            border: 1px solid #25262c;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .interest:hover {
+            border-color: var(--gold);
+            transform: translateY(-5px);
+        }
+
+        .interest .icon {
+            font-size: 35px;
+            margin-bottom: 10px;
+        }
+
+        .interest h3 {
+            color: var(--gold);
+            margin-bottom: 8px;
+        }
+
+        /* Skills */
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .skill {
+            background: #25262c;
+            padding: 9px 18px;
+            border-radius: 25px;
+            color: #ddd;
+            border: 1px solid #34353c;
+        }
+
+        /* Contact */
+
+        .contact {
+            text-align: center;
+            background: #15171b;
+        }
+
+        .contact p {
+            color: var(--muted);
+            margin-bottom: 25px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #888;
+            font-size: 14px;
+        }
+
+        footer span {
+            color: var(--gold);
+        }
+
+        /* Responsive Design */
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 8px;
+                font-size: 14px;
+            }
+
+            .hero {
+                flex-direction: column-reverse;
+                text-align: center;
+                padding: 50px 6%;
+            }
+
+            .profile {
+                width: 210px;
+                height: 250px;
+            }
+
+            .about {
+                grid-template-columns: 1fr;
+            }
+
+            .interests {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 45px 6%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+
+    <nav>
+        <div class="logo">SQ<span>.</span></div>
+
+        <div>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#interests">Interests</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+
+    <header class="hero" id="home">
+
+        <div class="hero-content">
+            <p>Hello, welcome to my world.</p>
+
+            <h1>
+                I'm <span>Shahriar</span><br>
+                Quader.
+            </h1>
+
+            <p class="tagline">
+                Curious mind. Creative soul. Lifelong learner.
+            </p>
+
+            <a href="#about" class="btn">Discover More</a>
+        </div>
+
+        <!-- Replace this image with your own photo -->
+        <img
+            src="me.jpg"
+            alt="Portrait of Shahriar Quader"
+            class="profile"
+        >
+
+    </header>
+
+    <!-- About -->
+
+    <section id="about">
+
+        <h2 class="section-title">
+            About <span>Me</span>
+        </h2>
+
+        <div class="about">
+
+            <div class="card">
+                <h3>Who I Am</h3>
+
+                <br>
+
+                <p>
+                    I'm Shahriar Quader, a Mechanical Engineering graduate
+                    from MIST, Bangladesh. I enjoy exploring technology,
+                    understanding how things work, and turning ideas into
+                    something meaningful.
+                </p>
+
+                <br>
+
+                <p>
+                    I'm always looking for opportunities to learn,
+                    grow, and challenge myself.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>My Philosophy</h3>
+
+                <br>
+
+                <p>
+                    I believe that curiousity is the beginning of every
+                    great achievement. Every day is an opportunity
+                    to become a better version of yourself.
+                </p>
+
+                <br>
+
+                <p>
+                    Dream big. Stay humble. Keep learning.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Interests -->
+
+    <section id="interests">
+
+        <h2 class="section-title">
+            My <span>Interests</span>
+        </h2>
+
+        <div class="interests">
+
+            <div class="interest">
+                <div class="icon">💻</div>
+                <h3>Technology</h3>
+                <p>Programming, web development and artificial intelligence.</p>
+            </div>
+
+            <div class="interest">
+                <div class="icon">⚙️</div>
+                <h3>Engineering</h3>
+                <p>Mechanical design, materials and problem solving.</p>
+            </div>
+
+            <div class="interest">
+                <div class="icon">📚</div>
+                <h3>Learning</h3>
+                <p>Exploring new ideas, history and the world around me.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Skills -->
+
+    <section id="skills">
+
+        <h2 class="section-title">
+            My <span>Skills</span>
+        </h2>
+
+        <div class="skills">
+            <span class="skill">Python</span>
+            <span class="skill">HTML</span>
+            
+            
+            
+            <span class="skill">Mechanical Engineering</span>
+            <span class="skill">ANSYS,SolidWorks</span>
+            <span class="skill">Problem Solving</span>
+        </div>
+
+    </section>
+
+    <!-- Contact -->
+
+    <section id="contact" class="contact">
+
+        <h2 class="section-title">
+            Let's <span>Connect</span>
+        </h2>
+
+        <p>
+            Have an interesting idea or project?
+            I'd love to hear from you.
+        </p>
+
+        <a href="mailto:your-email@example.com" class="btn">
+            Get In Touch
+        </a>
+
+    </section>
+
+    <!-- Footer -->
+
+    <footer>
+        <p>
+            © 2026 Shahriar Quader.
+            Made with <span>♥</span> and curiosity.
+        </p>
+    </footer>
+
+</body>
+</html>
